@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  width: 80%;
+  height: auto;
+  margin: 10px 20px;
+}
+
+button {
+  width: auto;
+  height: 48px;
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: 0;
+
+  &:hover.primary{
+    cursor: pointer;
+    background-color: #dfc545;
+  }
+
+  &:hover.secondary{
+    cursor: pointer;
+    background-color: #dadada;
+  }
+}
+
+button[disabled]{
+  background-color: #c3b37f;
+  color: #5f5f5f;
+}
+
+.btn-primary {
+  background-color: #f9dd4a;
+}
+
+.btn-secondary {
+  background-color: #e6e6e6;
+}
+

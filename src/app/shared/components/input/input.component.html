@@ -1,0 +1,15 @@
+<div class="field-container">
+  <label *ngIf="label">{{label}}</label>
+  <input
+    [ngClass]="{'validation-error': !isValid }"
+    [type]="type"
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    [disabled]="disabled"
+    (keyup)="onKeyUp()"
+    (change)="onChangeValue()"
+    [min]="min"
+  >
+  <span *ngIf="!isValid" class="error-message">{{errorMessage}}</span>
+</div>
+

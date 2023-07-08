@@ -1,0 +1,17 @@
+<div class="dropdown">
+  <fa-icon
+    class="btn-menu"
+    id="toggleButton"
+    #toggleButton
+    (click)="expandMenu()"
+    [icon]="faEllipsisVertical"
+  ></fa-icon>
+  <div
+    [ngClass]="{ show: expandedMenu }"
+    id="myDropdown"
+    class="dropdown-content"
+  >
+    <a (click)="onEditProduct()">Editar</a>
+    <a (click)="onDeleteProduct()">Eliminar</a>
+  </div>
+</div>

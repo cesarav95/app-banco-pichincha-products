@@ -1,0 +1,32 @@
+.form-container {
+  width: 80%;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 20px;
+}
+
+app-input{
+  width: 50%;
+}
+
+.option-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid gray;
+}

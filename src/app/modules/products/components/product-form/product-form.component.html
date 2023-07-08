@@ -1,0 +1,69 @@
+<div >
+  <form class="form-container" [formGroup]="productForm">
+    <div class="header">
+      <h1>{{title}}</h1>
+    </div>
+    <app-input
+      label="ID"
+      placeholder=""
+      formControlName="id"
+      [isValid]="!!id?.valid || isModeEdit"
+      [errorMessage]="'ID no valido'"
+    ></app-input>
+
+    <app-input
+      label="Nombre"
+      placeholder=""
+      formControlName="name"
+      [isValid]="!!name?.valid"
+    ></app-input>
+
+    <app-input
+      label="Descripcion"
+      placeholder=""
+      formControlName="description"
+      [isValid]="!!description?.valid"
+    ></app-input>
+
+    <app-input
+      label="Logo"
+      placeholder=""
+      formControlName="logo"
+      [isValid]="!!logo?.valid"
+    ></app-input>
+
+    <app-input
+      label="Fecha Liberacion"
+      placeholder=""
+      type="date"
+      formControlName="date_release"
+      [min]="currentDate"
+      (change)="onChangeRelease($event)"
+      [isValid]="!!date_release?.valid"
+    ></app-input>
+
+    <app-input
+      label="Fecha Revision"
+      placeholder=""
+      type="date"
+      formControlName="date_revision"
+    ></app-input>
+
+    <div class="option-buttons">
+      <button
+        class="btn-secondary"
+        (click)="restartForm()"
+      >
+        Reiniciar
+      </button>
+
+      <button
+        class="btn-primary"
+        (click)="sendData()"
+        [disabled]="!productForm.valid"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,6 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-layout',
+  template: ''
+})
+export class LayoutStubComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +16,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        LayoutStubComponent
       ],
     }).compileComponents();
   });
@@ -18,18 +26,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'app-banco-pichincha-products'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('app-banco-pichincha-products');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('app-banco-pichincha-products app is running!');
   });
 });
